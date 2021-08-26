@@ -1,4 +1,4 @@
-FROM openjdk:8 as base
+FROM openjdk:11 as base
 
 ARG HADOOP_VERSION=3.2.2
 ENV HADOOP_HOME=/hadoop
