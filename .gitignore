@@ -24,6 +24,7 @@ project/plugins/project/
 *.class
 *.log
 .bsp
+.scala_history
 
 # End of https://www.gitignore.io/api/scala
 
