@@ -10,7 +10,7 @@ ARG SPARK_VERSION=3.1.3
 ARG SPARK_LOG_DIRECTORY=/spark-events
 ENV SPARK_LOG_DIRECTORY=${SPARK_LOG_DIRECTORY}
 WORKDIR /spark
-RUN curl -L https://www.apache.org/dyn/closer.lua/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-without-hadoop.tgz | tar xz --strip-components=1 && \
+RUN curl -L https://dlcdn.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-without-hadoop.tgz | tar xz --strip-components=1 && \
     echo "export SPARK_DIST_CLASSPATH=$(/hadoop/bin/hadoop classpath)" >> conf/spark-env.sh && \
     echo "spark.hadoop.fs.s3a.aws.credentials.provider org.apache.hadoop.fs.s3a.AnonymousAWSCredentialsProvider" > conf/spark-defaults.conf
 
